@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>U Janusza</title>
+    </head>
+    <body>
+        <label for="pizza-select">Co chcesz szamać?</label>
+        <select name="pizzas" id="pizza-select">
+            <option value="you can do it here"></option> 
+            <option value="Janusz">Szef Janusz poleca</option>
+            <option value="Grazyna">Specjał Grażyny</option>
+            <option value="Seba">Szama Sebixa</option>
+            <option value="Brajan">Dla Brajanka</option>
+            <option value="Dzesika">Dla Dżesiki </option>
+            <option value="pizza A">Kebs Karyny</option>
+        </select>
+        <fieldset>
+            <legend>Sosidło</legend>
+            <div class="sauces">
+                <input type="checkbox" id="mild" name="mild">
+                <label for="mild">Lamersko-łagodny</label>
+                <input type="checkbox" id="hot" name="hot">
+                <label for="hot">Lekki dreszczyk</label>
+                <input type="checkbox" id="very-hot" name="very-hot">
+                <label for="very-hot">Mordę wykręca</label>
+                <input type="checkbox" id="killer" name="killer">
+                <label for="killer">Szacun na dzielni</label>
+                
+            </div>
+        </fieldset>
+        <div class="personal-info">
+            <input type="checkbox" id="" name="">
+            <label for="">Name and surname</label>
+            <input type="checkbox" id="" name="">
+            <label for="">e-mail</label>
+            <input type="checkbox" id="" name="">
+            <label for="">address</label>
+            <input type="checkbox" id="" name="">
+            <label for="">phone</label>
+        </div>
+        <fieldset>
+            <legend>Ze mną nie wypijesz?</legend>
+         <div class="drinks">
+            <input type="checkbox" id="coffee" name="coffee">
+            <label for="coffee">Kapuczyna</label>
+            <input type="checkbox" id="beer" name="beer">
+            <label for="beer">Piwerko</label>
+            <input type="checkbox" id="water" name="water">
+            <label for="water">Woda, prowadzę</label>
+            </div>
+        <div class="text-area-container">
+            <input type="text-area" class="text-area" id ="chef-message">
+            <label for="chef-message">Cynk dla Janusza</label>
+        </div>
+        <button class="submit-btn">Dej cynka</button>
+        <div  id="app"></div>
+        <script src="main.js"></script>
+    </body>
+</html>
