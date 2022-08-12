@@ -4,8 +4,11 @@ console.log(btn)
 function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
-console.log(pizzaValue)
-return pizzaValue
+    if(pizzaValue === 'none'){
+    return console.log('Nie chcę pizzy')
+    } else {
+    return pizzaValue
+    }
 }
 btn.addEventListener('click', getPizza)
 
