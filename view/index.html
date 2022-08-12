@@ -4,19 +4,20 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="..\css\style.css">
         <title>U Janusza</title>
     </head>
     <body>
+        <h1 class="bar-name">No elo, Mordo, u Janusza!</h1>
         <label for="pizza-select">Co chcesz szamać?</label>
         <select name="pizzas" id="pizza-select">
-            <option value="you can do it here"></option> 
+            <option value="">--Same spoko opcje--</option>
             <option value="Janusz">Szef Janusz poleca</option>
             <option value="Grazyna">Specjał Grażyny</option>
             <option value="Seba">Szama Sebixa</option>
             <option value="Brajan">Dla Brajanka</option>
             <option value="Dzesika">Dla Dżesiki </option>
-            <option value="pizza A">Kebs Karyny</option>
+            <option value="Karyna">Kebs Karyny</option>
         </select>
         <fieldset>
             <legend>Sosidło</legend>
@@ -53,11 +54,11 @@
             <label for="water">Woda, prowadzę</label>
             </div>
         <div class="text-area-container">
-            <input type="text-area" class="text-area" id ="chef-message">
-            <label for="chef-message">Cynk dla Janusza</label>
+            <input type="text-area" class="text-area" id ="chef-message" placeholder="Cynk dla Janusza">
+            <label for="chef-message"></label>
         </div>
-        <button class="submit-btn">Dej cynka</button>
+        <button class="submit-btn">Dobra, bierę</button>
         <div  id="app"></div>
-        <script src="main.js"></script>
+        <script src="..\js\main.js"></script>
     </body>
 </html>
