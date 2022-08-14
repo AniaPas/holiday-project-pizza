@@ -10,13 +10,22 @@ const pizzaValue = pizzaSelect.value;
     return console.log('Chcę pizzę: ', pizzaValue)
     }
 }
-function getSauce(){
-const sauceCheckbox = document.querySelectorAll('input[name="sauce"]');
-return console.log(sauceCheckbox)
+
+function getSauce() {
+    const sauceCheckbox = document.querySelectorAll('input[name="sauce"]:checked');
+    if(sauceCheckbox.length === 0) {
+    return console.log('Nie chcę sosu')
+    } else {
+    let sauceValues = [] 
+    sauceCheckbox.forEach((item) => {
+    sauceValues.push(item.value)
+    })
+    return console.log(sauceValues)
+    }
 }
 
-btn.addEventListener('click',getPizza);
-btn.addEventListener('click',getSauce)
+btn.addEventListener('click', getPizza);
+btn.addEventListener('click', getSauce)
 
 //const selectPizza = document.getElementById('pizza-select');
 //selectPizza.addEventListener('change', function handleChange (event){
