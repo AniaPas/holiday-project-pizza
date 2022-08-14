@@ -7,10 +7,16 @@ const pizzaValue = pizzaSelect.value;
     if(pizzaValue === 'none'){
     return console.log('Nie chcę pizzy')
     } else {
-    return pizzaValue
+    return console.log('Chcę pizzę: ', pizzaValue)
     }
 }
-btn.addEventListener('click', getPizza)
+function getSauce(){
+const sauceCheckbox = document.querySelectorAll('input[name="sauce"]');
+return console.log(sauceCheckbox)
+}
+
+btn.addEventListener('click',getPizza);
+btn.addEventListener('click',getSauce)
 
 //const selectPizza = document.getElementById('pizza-select');
 //selectPizza.addEventListener('change', function handleChange (event){
