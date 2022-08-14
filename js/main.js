@@ -11,7 +11,7 @@ const pizzaValue = pizzaSelect.value;
     }
 }
 
-function getSauce(name) {
+function getSauce() {
     const sauceCheckbox = document.querySelectorAll('input[name="sauce"]:checked');
     if(sauceCheckbox.length === 0) {
     return console.log('Nie chcę sosu')
