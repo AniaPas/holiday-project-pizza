@@ -36,9 +36,13 @@ function getDrink() {
         }
 
 }
-btn.addEventListener('click', getPizza);
-btn.addEventListener('click', getSauce)
-btn.addEventListener('click', getDrink)
+function wrapper(){
+    getPizza()
+    getSauce()
+    getDrink
+}
+btn.addEventListener('click', wrapper)
+
 //const selectPizza = document.getElementById('pizza-select');
 //selectPizza.addEventListener('change', function handleChange (event){
     //console.log(event.target.value);
