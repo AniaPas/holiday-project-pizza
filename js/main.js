@@ -1,4 +1,5 @@
 //Obtain the selected pizza option from the HTML select tag:
+
 const btn = document.querySelector('.submit-btn');
 console.log(btn)
 function getPizza() {
@@ -10,6 +11,8 @@ const pizzaValue = pizzaSelect.value;
     return console.log('Chcę pizzę: ', pizzaValue)
     }
 }
+
+//Obtain ifo from checkboxes:
 
 function getCheckBox(checkedInput, item) {
     const Checkbox = document.querySelectorAll(checkedInput);
@@ -23,6 +26,8 @@ function getCheckBox(checkedInput, item) {
     return console.log('I want:' , item, checkboxValues)
     }
 }
+
+//Wrap multiple functions into one:
 
 function wrapper(){
     getPizza()
