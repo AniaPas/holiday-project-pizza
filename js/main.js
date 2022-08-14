@@ -11,7 +11,7 @@ const pizzaValue = pizzaSelect.value;
     }
 }
 
-function getSauce() {
+function getSauce(name) {
     const sauceCheckbox = document.querySelectorAll('input[name="sauce"]:checked');
     if(sauceCheckbox.length === 0) {
     return console.log('Nie chcę sosu')
@@ -20,13 +20,25 @@ function getSauce() {
     sauceCheckbox.forEach((item) => {
     sauceValues.push(item.value)
     })
-    return console.log(sauceValues)
+    return console.log('Chcę sos/sosy',sauceValues)
     }
 }
+function getDrink() {
+    const drinksCheckbox = document.querySelectorAll('input[name="drink"]:checked');
+    if(drinksCheckbox.length === 0) {
+        return console.log('Nie chcę napoju')
+        } else {
+        let drinkValues = [] 
+        drinksCheckbox.forEach((item) => {
+        drinkValues.push(item.value)
+        })
+        return console.log('Chcę napój/napoje: ', drinkValues)
+        }
 
+}
 btn.addEventListener('click', getPizza);
 btn.addEventListener('click', getSauce)
-
+btn.addEventListener('click', getDrink)
 //const selectPizza = document.getElementById('pizza-select');
 //selectPizza.addEventListener('change', function handleChange (event){
     //console.log(event.target.value);
