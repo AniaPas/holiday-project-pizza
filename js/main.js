@@ -86,8 +86,17 @@ function wrapper(){
     getAddress()
     getChefMessage()
 
+} 
+let Orders = []
+function addOrder() {
+    let customerOrder = {
+        pizza: getPizza()
+        
+
+    }
 }
-btn.addEventListener('click', wrapper)
+Orders.push(addOrder)
+btn.addEventListener('click', addOrder)
 
 
 
