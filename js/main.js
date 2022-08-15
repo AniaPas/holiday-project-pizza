@@ -33,16 +33,19 @@ function wrapper(){
     getPizza()
     getCheckBox('input[name="sauce"]:checked', 'sauce')
     getCheckBox('input[name="drink"]:checked', 'drink')
+    getName()
 }
 btn.addEventListener('click', wrapper)
 
-//const selectPizza = document.getElementById('pizza-select');
-//selectPizza.addEventListener('change', function handleChange (event){
-    //console.log(event.target.value);
-    //console.log(selectPizza.options[selectPizza.selectedIndex].text);
-//})
+function getName() {
+    const obtainName = document.querySelector('#name').value
+    if(obtainName.length < 3){
+    return alert('Podaj prawdiwe dane')
+    } else {
+    return console.log('Name: ', obtainName)
+    }
+}
 
-//const chooseSauce = document.querySelectorAll()
 class Order {
     constructor(pizza, sauce, name, email, address, phone, drink) {
         this.pizza= pizza
