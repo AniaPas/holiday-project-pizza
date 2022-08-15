@@ -27,15 +27,7 @@ function getCheckBox(checkedInput, item) {
     }
 }
 
-//Wrap multiple functions into one:
-
-function wrapper(){
-    getPizza()
-    getCheckBox('input[name="sauce"]:checked', 'sauce')
-    getCheckBox('input[name="drink"]:checked', 'drink')
-    getName()
-}
-btn.addEventListener('click', wrapper)
+//Obtain info from inputs
 
 function getName() {
     const obtainName = document.querySelector('#name').value
@@ -45,6 +37,38 @@ function getName() {
     return console.log('Name: ', obtainName)
     }
 }
+function getMail() {
+    const obtainMail = document.querySelector('#email').value
+    if(obtainMail.search('@') > 0 && obtainMail.search('@') < obtainMail.length - 1) {
+    return console.log('Mail: ', obtainMail)
+    } else {
+    return alert('Podaj prawdiwy e-mail')
+    }
+}
+const re = /^\+48\d{9}$/;
+function getPhone() {
+    const obtainPhone = document.querySelector('#phone').value
+    const rightNo = re.exec(obtainPhone)
+    if(!rightNo) {
+        return alert('Nie ma numeru, nie ma szamy!');
+    } else {
+        return console.log(obtainPhone)
+    }
+}
+
+//Wrap multiple functions into one:
+
+function wrapper(){
+    getPizza()
+    getCheckBox('input[name="sauce"]:checked', 'sauce')
+    getCheckBox('input[name="drink"]:checked', 'drink')
+    getName()
+    getMail()
+    getPhone()
+}
+btn.addEventListener('click', wrapper)
+
+
 
 class Order {
     constructor(pizza, sauce, name, email, address, phone, drink) {
