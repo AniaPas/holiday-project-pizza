@@ -6,9 +6,9 @@ function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
     if(pizzaValue === 'none'){
-    return console.log('Nie chcę pizzy')
+    return console.log('I dont want any pizza')
     } else {
-    return console.log('Chcę pizzę: ', pizzaValue)
+    return console.log('I want pizza: ', pizzaValue)
     }
 }
 
@@ -32,7 +32,7 @@ function getCheckBox(checkedInput, item) {
 function getName() {
     const obtainName = document.querySelector('#name').value
     if(obtainName.length < 3){
-    return alert('Podaj prawdiwe dane')
+    return alert('Podaj prawdziwe dane i YOLO xd')
     } else {
     return console.log('Name: ', obtainName)
     }
@@ -42,7 +42,7 @@ function getMail() {
     if(obtainMail.search('@') > 0 && obtainMail.search('@') < obtainMail.length - 1) {
     return console.log('Mail: ', obtainMail)
     } else {
-    return alert('Podaj prawdiwy e-mail')
+    return alert('Nie spinaj się, daj prawdiwy e-mail!')
     }
 }
 const re = /^\+48\d{9}$/;
@@ -52,7 +52,25 @@ function getPhone() {
     if(!rightNo) {
         return alert('Nie ma numeru, nie ma szamy!');
     } else {
-        return console.log(obtainPhone)
+        return console.log('Phone: ', obtainPhone)
+    }
+}
+function getAddress() {
+    const obtainAddress =  document.querySelector('#address').value
+    if(obtainAddress.search('-') === -1 || obtainAddress.length < 9){
+        return alert('Ziom, ziomalko, to raczej nie Twój adres!');
+    } else {
+        return console.log('Address', obtainAddress)
+    }
+}
+function getChefMessage() {
+    const obtainChefMessage = document.querySelector('#chef-message').value;
+    if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
+        return console.log('wulgaryzmy są ok, tylko bez hejtu, pliz xd');
+    } else if (obtainChefMessage.length < 1) {
+        return console.log('No message for th chef')
+    } else {
+         return console.log('Message for the chef: ', obtainChefMessage)
     }
 }
 
@@ -65,6 +83,9 @@ function wrapper(){
     getName()
     getMail()
     getPhone()
+    getAddress()
+    getChefMessage()
+
 }
 btn.addEventListener('click', wrapper)
 
