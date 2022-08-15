@@ -68,7 +68,7 @@ function getChefMessage() {
     if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
         return console.log('wulgaryzmy są ok, tylko bez hejtu, pliz xd');
     } else if (obtainChefMessage.length < 1) {
-        return console.log('No message for th chef')
+        return console.log('No message for the chef')
     } else {
          return console.log('Message for the chef: ', obtainChefMessage)
     }
