@@ -1,17 +1,33 @@
 //Obtain the selected pizza option from the HTML select tag:
 
 const btn = document.querySelector('.submit-btn');
-console.log(btn)
+
 function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
     if(pizzaValue === 'none'){
-    return  console.log({pizza : 'I dont want any pizza'})
+        class Pizza {
+            constructor(pizza) {
+                this.pizza= pizza;
+                console.log(`No pizza`)
+            }
+        }
+        const pizzaObj = new Pizza('no pizza')
+        return pizzaObj
+    
     } else {
-    return console.log({pizza:pizzaValue})
+        class Pizza {
+            constructor(pizza) {
+                this.pizza= pizza;
+                console.log(`I want ${this.pizza}`)
+            }
+        }
+ const pizzaObj = new Pizza(pizzaValue)
+    return pizzaObj
     }
 }
-
+//const show = getPizza()
+//console.log(show)
 //Obtain ifo from checkboxes:
 
 function getCheckBox(checkedInput, item) {
