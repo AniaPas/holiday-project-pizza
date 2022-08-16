@@ -6,9 +6,9 @@ function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
     if(pizzaValue === 'none'){
-    return console.log('I dont want any pizza')
+    return  console.log({pizza : 'I dont want any pizza'})
     } else {
-    return console.log('I want pizza: ', pizzaValue)
+    return console.log({pizza:pizzaValue})
     }
 }
 
@@ -40,7 +40,7 @@ function getName() {
 function getMail() {
     const obtainMail = document.querySelector('#email').value
     if(obtainMail.search('@') > 0 && obtainMail.search('@') < obtainMail.length - 1) {
-    return console.log('Mail: ', obtainMail)
+    return console.log({mail:  obtainMail})
     } else {
     return alert('Nie spinaj się, daj prawdiwy e-mail!')
     }
@@ -87,16 +87,18 @@ function wrapper(){
     getChefMessage()
 
 } 
-let Orders = []
-function addOrder() {
+/*let Orders = []
+const addOrder =(ev) => {
+    ev.preventDefault()
     let customerOrder = {
-        pizza: getPizza()
+        getPizza
         
-
     }
-}
-Orders.push(addOrder)
-btn.addEventListener('click', addOrder)
+
+Orders.push(customerOrder)
+}*/
+btn.addEventListener('click', wrapper)
+
 
 
 
