@@ -84,10 +84,12 @@ function getAddress() {
 }
 function getChefMessage() {
     const obtainChefMessage = document.querySelector('#chef-message').value;
-    if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
-         alert('wulgaryzmy są ok, ale tutaj są zbędne')     
+    if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1 || obtainChefMessage.search(' chuj') !== -1 || obtainChefMessage.search(' huj') !==-1) {
+         alert('wulgaryzmy są ok, ale tutaj są zbędne')
+        return obtainChefMessage     
     } else if (obtainChefMessage.length < 1) {
         console.log('No message for the chef')
+        return obtainChefMessage
     } else {
          return obtainChefMessage
     }
