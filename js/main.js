@@ -1,4 +1,9 @@
+//Obtaining the submit-button from HTML
+
 const btn = document.getElementById('submit-btn')
+
+//Creating the Order class
+
 class Order {
     constructor(name, email, phone, address, pizza, sauce, drink, message) {
         this.name = name
@@ -9,11 +14,10 @@ class Order {
         this.sauce = sauce
         this.drink = drink
         this.message = message
-    }
-    get getOrder(){
-        `Klient/ka (${this.name}, ${this.email}, ${this.address}, nr telefonu ${this.phone}) zamówił/a pizzę ${this.pizza} z sosem ${this.sauce} i napojem ${this.drink}`
+
     }
 }
+
 //Obtain the selected pizza option from the HTML select tag:
 
 function getPizza() {
@@ -22,7 +26,6 @@ const pizzaValue = pizzaSelect.value;
     
     return pizzaValue
 }
-
 
 //Obtain ifo from checkboxes:
 
@@ -82,8 +85,7 @@ function getAddress() {
 function getChefMessage() {
     const obtainChefMessage = document.querySelector('#chef-message').value;
     if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
-         alert('wulgaryzmy są ok, ale tutaj są zbędne')
-         
+         alert('wulgaryzmy są ok, ale tutaj są zbędne')     
     } else if (obtainChefMessage.length < 1) {
         console.log('No message for the chef')
     } else {
@@ -91,28 +93,12 @@ function getChefMessage() {
     }
 }
 
-//Wrap multiple functions into one:
+//Wrap multiple functions into one and applying the class constructor:
 
-
-   function wrapper(){
-
+function wrapper(){
     const order1 = new Order(getName(), getMail(), getPhone(),getAddress(), getPizza(), getCheckBox('input[name="sauce"]:checked', 'sauce'), getCheckBox('input[name="drink"]:checked', 'drink'), getChefMessage())
-
-console.log(order1)
-
-} 
-   /* getPizza()
-    getCheckBox('input[name="sauce"]:checked', 'sauce')
-    getCheckBox('input[name="drink"]:checked', 'drink')
-    getName()
-    getMail()
-    getPhone()
-    getAddress()
-    getChefMessage()*/
-
-
-
-
+    console.log(order1)
+}
 btn.addEventListener('click', wrapper)
 
 
