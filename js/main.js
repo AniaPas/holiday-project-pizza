@@ -1,3 +1,18 @@
+class Order {
+    constructor(pizza, sauce, name, email, address, phone, drink, message) {
+        this.pizza= pizza
+        this.sauce = sauce
+        this.name = name
+        this.email = email
+        this.address = address
+        this.phone = phone
+        this.drink = drink
+        this.message = message
+    }
+    get getOrder(){
+        `Klient/ka (${this.cname}, ${this.email}, ${this.address}, nr telefonu ${this.phone}) zamówił/a pizzę ${this.pizza} z sosem ${this.sauce} i napojem ${this.drink}`
+    }
+}
 //Obtain the selected pizza option from the HTML select tag:
 
 const btn = document.querySelector('.submit-btn');
@@ -6,9 +21,9 @@ function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
     if(pizzaValue === 'none'){
-    return  console.log({pizza : 'I dont want any pizza'})
+    return  console.log('I dont want any pizza')
     } else {
-    return console.log({pizza:pizzaValue})
+    return pizzaValue
     }
 }
 
@@ -17,13 +32,13 @@ const pizzaValue = pizzaSelect.value;
 function getCheckBox(checkedInput, item) {
     const Checkbox = document.querySelectorAll(checkedInput);
     if(Checkbox.length === 0) {
-    return console.log('I dont want: ', item)
+    return []
     } else {
     let checkboxValues = [] 
     Checkbox.forEach((item) => {
     checkboxValues.push(item.value)
     })
-    return console.log('I want:' , item, checkboxValues)
+    return (checkboxValues)
     }
 }
 
@@ -34,13 +49,13 @@ function getName() {
     if(obtainName.length < 3){
     return alert('Podaj prawdziwe dane i YOLO xd')
     } else {
-    return console.log('Name: ', obtainName)
+    return obtainName
     }
 }
 function getMail() {
     const obtainMail = document.querySelector('#email').value
     if(obtainMail.search('@') > 0 && obtainMail.search('@') < obtainMail.length - 1) {
-    return console.log({mail:  obtainMail})
+    return obtainMail
     } else {
     return alert('Nie spinaj się, daj prawdiwy e-mail!')
     }
@@ -52,7 +67,7 @@ function getPhone() {
     if(!rightNo) {
         return alert('Nie ma numeru, nie ma szamy!');
     } else {
-        return console.log('Phone: ', obtainPhone)
+        return obtainPhone
     }
 }
 function getAddress() {
@@ -60,17 +75,17 @@ function getAddress() {
     if(obtainAddress.search('-') === -1 || obtainAddress.length < 9){
         return alert('Ziom, ziomalko, to raczej nie Twój adres!');
     } else {
-        return console.log('Address', obtainAddress)
+        return obtainAddress
     }
 }
 function getChefMessage() {
     const obtainChefMessage = document.querySelector('#chef-message').value;
     if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
-        return console.log('wulgaryzmy są ok, tylko bez hejtu, pliz xd');
+         console.log('wulgaryzmy są ok, tylko bez hejtu, pliz xd');
     } else if (obtainChefMessage.length < 1) {
-        return console.log('No message for the chef')
+        console.log('No message for the chef')
     } else {
-         return console.log('Message for the chef: ', obtainChefMessage)
+         return obtainChefMessage
     }
 }
 
@@ -87,32 +102,9 @@ function wrapper(){
     getChefMessage()
 
 } 
-/*let Orders = []
-const addOrder =(ev) => {
-    ev.preventDefault()
-    let customerOrder = {
-        getPizza
-        
-    }
 
-Orders.push(customerOrder)
-}*/
 btn.addEventListener('click', wrapper)
 
 
 
 
-class Order {
-    constructor(pizza, sauce, name, email, address, phone, drink) {
-        this.pizza= pizza
-        this.sauce = sauce
-        this.name = name
-        this.email = email
-        this.address = address
-        this.phone = phone
-        this.drink = drink
-    }
-    get getOrder(){
-        `Klient/ka (${this.name}, ${this.email}, ${this.address}, nr telefonu ${this.phone}) zamówił/a pizzę ${this.pizza} z sosem ${this.sauce} i napojem ${this.drink}`
-    }
-}
