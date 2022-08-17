@@ -1,31 +1,28 @@
+const btn = document.getElementById('submit-btn')
 class Order {
-    constructor(pizza, sauce, name, email, address, phone, drink, message) {
-        this.pizza= pizza
-        this.sauce = sauce
+    constructor(name, email, phone, address, pizza, sauce, drink, message) {
         this.name = name
         this.email = email
-        this.address = address
         this.phone = phone
+        this.address = address
+        this.pizza = pizza
+        this.sauce = sauce
         this.drink = drink
         this.message = message
     }
     get getOrder(){
-        `Klient/ka (${this.cname}, ${this.email}, ${this.address}, nr telefonu ${this.phone}) zamówił/a pizzę ${this.pizza} z sosem ${this.sauce} i napojem ${this.drink}`
+        `Klient/ka (${this.name}, ${this.email}, ${this.address}, nr telefonu ${this.phone}) zamówił/a pizzę ${this.pizza} z sosem ${this.sauce} i napojem ${this.drink}`
     }
 }
 //Obtain the selected pizza option from the HTML select tag:
 
-const btn = document.querySelector('.submit-btn');
-console.log(btn)
 function getPizza() {
 const pizzaSelect = document.getElementById('pizza-select')
 const pizzaValue = pizzaSelect.value;
-    if(pizzaValue === 'none'){
-    return  console.log('I dont want any pizza')
-    } else {
+    
     return pizzaValue
-    }
 }
+
 
 //Obtain ifo from checkboxes:
 
@@ -47,7 +44,8 @@ function getCheckBox(checkedInput, item) {
 function getName() {
     const obtainName = document.querySelector('#name').value
     if(obtainName.length < 3){
-    return alert('Podaj prawdziwe dane i YOLO xd')
+        alert('Podaj prawdziwe dane i YOLO xd')
+    return obtainName
     } else {
     return obtainName
     }
@@ -91,17 +89,25 @@ function getChefMessage() {
 
 //Wrap multiple functions into one:
 
-function wrapper(){
-    getPizza()
+
+   function wrapper(){
+
+    const order1 = new Order(getName(), getMail(), getPhone(),getAddress(), getPizza(), getCheckBox('input[name="sauce"]:checked', 'sauce'), getCheckBox('input[name="drink"]:checked', 'drink'), getChefMessage())
+
+console.log(order1)
+
+} 
+   /* getPizza()
     getCheckBox('input[name="sauce"]:checked', 'sauce')
     getCheckBox('input[name="drink"]:checked', 'drink')
     getName()
     getMail()
     getPhone()
     getAddress()
-    getChefMessage()
+    getChefMessage()*/
 
-} 
+
+
 
 btn.addEventListener('click', wrapper)
 
