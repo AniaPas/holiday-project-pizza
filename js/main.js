@@ -55,7 +55,8 @@ function getMail() {
     if(obtainMail.search('@') > 0 && obtainMail.search('@') < obtainMail.length - 1) {
     return obtainMail
     } else {
-    return alert('Nie spinaj się, daj prawdiwy e-mail!')
+        alert('Nie spinaj się, daj prawdiwy e-mail!')
+    return obtainMail
     }
 }
 const re = /^\+48\d{9}$/;
@@ -63,7 +64,8 @@ function getPhone() {
     const obtainPhone = document.querySelector('#phone').value
     const rightNo = re.exec(obtainPhone)
     if(!rightNo) {
-        return alert('Nie ma numeru, nie ma szamy!');
+        alert('Nie ma numeru, nie ma szamy!');
+        return obtainPhone
     } else {
         return obtainPhone
     }
@@ -71,7 +73,8 @@ function getPhone() {
 function getAddress() {
     const obtainAddress =  document.querySelector('#address').value
     if(obtainAddress.search('-') === -1 || obtainAddress.length < 9){
-        return alert('Ziom, ziomalko, to raczej nie Twój adres!');
+        alert('Ziom, ziomalko, to raczej nie Twój adres!');
+        return obtainAddress
     } else {
         return obtainAddress
     }
@@ -79,7 +82,8 @@ function getAddress() {
 function getChefMessage() {
     const obtainChefMessage = document.querySelector('#chef-message').value;
     if(obtainChefMessage.search('kurw') !== -1 || obtainChefMessage.search('pierd') !== -1) {
-         console.log('wulgaryzmy są ok, tylko bez hejtu, pliz xd');
+         alert('wulgaryzmy są ok, ale tutaj są zbędne')
+         
     } else if (obtainChefMessage.length < 1) {
         console.log('No message for the chef')
     } else {
