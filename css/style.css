@@ -1,1 +1,10 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0 0 0 0;
+  font-family: 'Truculenta';
+}
+
+.bar-name {
+  font-family: "Just Me Again Down Here";
+  font-size: 5rem;
+}
+/*# sourceMappingURL=style.css.map */

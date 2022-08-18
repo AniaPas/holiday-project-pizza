@@ -1,0 +1,9 @@
+@import './tokens';
+* {
+    margin: 0 0 0 0;
+    font-family:'Truculenta' ;
+  }
+  .bar-name {
+    font-family: $font1;
+    font-size: 5rem;
+  }

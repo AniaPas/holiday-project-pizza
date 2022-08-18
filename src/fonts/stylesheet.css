@@ -1,8 +1,18 @@
 @font-face {
-    font-family: 'Alata';
-    src: url('Alata-Regular.woff2') format('woff2'),
-        url('Alata-Regular.woff') format('woff');
+    font-family: 'Just Me Again Down Here';
+    src: url('JustMeAgainDownHere.woff2') format('woff2'),
+        url('JustMeAgainDownHere.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Truculenta';
+    src: url('Truculenta-Regular.woff2') format('woff2'),
+        url('Truculenta-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
