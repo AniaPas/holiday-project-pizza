@@ -9,8 +9,13 @@
         <title>U Janusza</title>
     </head>
     <body>
-        <h1 class="bar-name">U Janusza</h1> 
-        <h2 class="welcome">Elo, Mordo</h2>
+        <header>
+            <div class="title">
+                <h1 class="bar-name">U Janusza</h1>
+                <h2 class="welcome">Elo, Mordo</h2>
+            </div>
+        </header>
+       <div class="pizza-select">
         <label for="pizza-select">Jaką pizzę chcesz szamać?</label>
         <select name="pizzas" id="pizza-select">
             <option value="none">--Same spoko opcje--</option>
@@ -21,7 +26,8 @@
             <option value="Dzesika">Dla Dżesiki </option>
             <option value="Karyna">Kebs Karyny</option>
         </select>
-        <fieldset>
+        </div> 
+        <fieldset class="sauce-wrapper">
             <legend>Sosidło</legend>
             <div class="sauces">
                 <input type="checkbox" id="mild" name="sauce" value="mild" >
@@ -34,7 +40,8 @@
                 <label for="killer">Szacun na dzielni</label>
             </div>
         </fieldset>
-        <fieldset>
+        </div>
+        <fieldset class="drinks-warpper">
                 <legend>Ze mną nie wypijesz?</legend>
         <div class="drinks">
             <input type="checkbox" id="coffee" name="drink" value="coffee">
@@ -45,22 +52,26 @@
             <label for="water">H2O, bo prowadzę</label>
             </div>
         </fieldset>
-        <div class="personal-info">
+        <fieldset class="personal-info">
+            <legend>Dawaj dane</legend>
           <input type="text" id="name" name="" value="">
-            <label for="">Name and surname</label>
+            <label for="">Imię i nazwisko</label>
             <input type="text" id="email" name="">
             <label for="">e-mail</label>
             <input type="text" id="address" name="">
-            <label for="address">address</label>
+            <label for="address">Adres dostawy</label>
             <input type="" id="phone" name="" value="" placeholder="+48xxxxxxxxx">
-            <label for="phone">phone</label>
-        </div>
+            <label for="phone">telefon</label>
+        </fieldset>
     
-        <div class="text-area-container">
-            <input type="text-area" class="text-area" id ="chef-message" placeholder="Cynk dla Janusza">
+        <fieldset class="text-area-container">
+            <legend>jak coś, to pisz</legend>
             <label for="chef-message"></label>
+            <input type="text-area" class="text-area" id ="chef-message" placeholder="Cynk dla Janusza">
+        </fieldset>
+        <div class="button-div">
+            <button class="submit-btn" id="submit-btn">Dobra, bierę</button>
         </div>
-        <button class="submit-btn" id="submit-btn">Dobra, bierę</button>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script src="..\js\main.js"></script>
     </body>

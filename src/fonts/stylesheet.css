@@ -1,16 +1,25 @@
 @font-face {
-    font-family: 'Just Me Again Down Here';
-    src: url('JustMeAgainDownHere.woff2') format('woff2'),
-        url('JustMeAgainDownHere.woff') format('woff');
+    font-family: 'Righteous';
+    src: url('Righteous-Regular.woff2') format('woff2'),
+        url('Righteous-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Truculenta';
-    src: url('Truculenta-Regular.woff2') format('woff2'),
-        url('Truculenta-Regular.woff') format('woff');
+    font-family: 'Rubik Dirt';
+    src: url('RubikDirt-Regular.woff2') format('woff2'),
+        url('RubikDirt-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Didact Gothic';
+    src: url('DidactGothic-Regular.woff2') format('woff2'),
+        url('DidactGothic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
