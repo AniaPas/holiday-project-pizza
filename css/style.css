@@ -1,22 +1,17 @@
 * {
   margin: 0 0 0 0;
-  font-family: 'Didact Gothic';
+  font-family: "Didact Gothic";
   font-size: 20px;
-}
-
-.bar-name {
-  font-family: "Righteous";
-  font-size: 5rem;
-  font-weight: 300;
-  color: black;
+  font-weight: bold;
 }
 
 body {
+  margin: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[7];
       grid-template-rows: repeat(7, 1fr);
-  background-color: #eae8e8;
+  background-color: #ba0c01;
 }
 
 body header {
@@ -40,6 +35,21 @@ body header {
           align-items: center;
 }
 
+body header .bar-name {
+  font-family: "Righteous";
+  font-size: 5rem;
+  font-weight: 300;
+  color: #daa801;
+}
+
+body header .welcome {
+  font-family: "Didact Gothic";
+  color: #daa801;
+  font-size: 2rem;
+  text-decoration: overline;
+  margin-top: 10vh;
+}
+
 body header .logo {
   width: 20vw;
   height: auto;
@@ -47,41 +57,103 @@ body header .logo {
 }
 
 body .pizza-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
 }
 
-body .sauce-warpper {
+body .pizza-select .which_pizza {
+  font-size: 2rem;
+  font-family: "Righteous";
+  font-weight: 200;
+}
+
+body .pizza-select #pizza-select {
+  background-color: #45b61f;
+  border-radius: 5px;
+  width: 30vw;
+  border: solid 3px black;
+  padding: 5px;
+}
+
+body .pizza-select #pizza-select :hover {
+  background-color: #daa801;
+}
+
+body .sauce-wrapper {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
 }
 
 body .drinks-wrapper {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
 }
 
 body .personal-info {
   -ms-grid-row: 5;
   -ms-grid-row-span: 1;
   grid-row: 5/6;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
 }
 
 body .text-area-container {
   -ms-grid-row: 6;
   -ms-grid-row-span: 1;
   grid-row: 6/7;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
 }
 
 body .button-div {
   -ms-grid-row: 7;
   -ms-grid-row-span: 1;
   grid-row: 7/8;
+}
+
+body .legend {
+  font-size: 1.5rem;
+  font-family: "Righteous";
+  font-weight: 200;
+  background-color: #45b61f;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: solid 3px black;
 }
 /*# sourceMappingURL=style.css.map */

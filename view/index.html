@@ -12,12 +12,12 @@
         <header>
             <div class="title">
                 <h1 class="bar-name">U Janusza</h1>
-                <h2 class="welcome">Elo, Mordo</h2>
+                <h2 class="welcome">Elo, Mordo XD</h2>
             </div>
-            <img class="logo" src="..\src\images\pizza_slice.png">
+            <img class="logo" src="..\src\images\pizza_slice_yellow.png">
         </header>
        <div class="pizza-select">
-        <label for="pizza-select">Jaką pizzę chcesz szamać?</label>
+        <label for="pizza-select" class="which_pizza">Jaką pizzunię?>>></label>
         <select name="pizzas" id="pizza-select">
             <option value="none">--Same spoko opcje--</option>
             <option value="Janusz">Szef Janusz poleca</option>
@@ -29,7 +29,7 @@
         </select>
         </div> 
         <fieldset class="sauce-wrapper">
-            <legend>Sosidło</legend>
+            <legend class="legend">Sosidło</legend>
             <div class="sauces">
                 <input type="checkbox" id="mild" name="sauce" value="mild" >
                 <label for="mild">Lamersko-łagodny</label>
@@ -42,19 +42,19 @@
             </div>
         </fieldset>
         </div>
-        <fieldset class="drinks-warpper">
-                <legend>Ze mną nie wypijesz?</legend>
+        <fieldset class="drinks-wrapper">
+                <legend class="legend">Ze mną nie wypijesz?</legend>
         <div class="drinks">
-            <input type="checkbox" id="coffee" name="drink" value="coffee">
+            <input type="checkbox" class="checkbox" id="coffee" name="drink" value="coffee">
             <label for="coffee">Kapuczyna</label>
-            <input type="checkbox" id="beer" name="drink" value="beer">
+            <input type="checkbox" class="checkbox" id="beer" name="drink" value="beer">
             <label for="beer">Piwerko</label>
-            <input type="checkbox" id="water" name="drink" value="water">
+            <input type="checkbox" class="checkbox" id="water" name="drink" value="water">
             <label for="water">H2O, bo prowadzę</label>
             </div>
         </fieldset>
         <fieldset class="personal-info">
-            <legend>Dawaj dane</legend>
+            <legend class="legend">Dawaj dane</legend>
           <input type="text" id="name" name="" value="">
             <label for="">Imię i nazwisko</label>
             <input type="text" id="email" name="">
@@ -66,14 +66,13 @@
         </fieldset>
     
         <fieldset class="text-area-container">
-            <legend>jak coś, to pisz</legend>
+            <legend class="legend">Jak coś, to pisz</legend>
             <label for="chef-message"></label>
             <input type="text-area" class="text-area" id ="chef-message" placeholder="Cynk dla Janusza">
         </fieldset>
         <div class="button-div">
             <button class="submit-btn" id="submit-btn">Dobra, bierę</button>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
         <script src="..\js\main.js"></script>
     </body>
 </html>

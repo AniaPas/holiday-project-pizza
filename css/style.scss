@@ -1,20 +1,17 @@
 @import './tokens';
+@import './mixins';
 * {
     margin: 0 0 0 0;
-    font-family: 'Didact Gothic';
+    font-family: $font1;
     font-size: 20px;
+    font-weight: bold;
   }
-  .bar-name {
-    font-family: $font2;
-    font-size: 5rem;
-    font-weight: 300;
-    color: black;
-    //text-shadow: 7px 8px 0px $yellow;
-  }
+  
   body {
+    margin: 10px;
     display: grid;
     grid-template-rows: repeat(7, 1fr);
-    background-color: $gray;
+    background-color: $red;
     
       header {
         grid-row: 1/2;
@@ -23,10 +20,21 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        .title {
-
-  
+        .bar-name {
+          font-family: $font2;
+          font-size: 5rem;
+          font-weight: 300;
+          color: $yellow;
+          //text-shadow: 7px 8px 0px black;
         }
+        .welcome{
+          font-family: $font1;
+          color: $yellow;
+          font-size: 2rem;
+          text-decoration: overline;
+          margin-top: 10vh;
+        }
+      
         .logo {
         width: 20vw;
         height: auto; 
@@ -35,24 +43,47 @@
         }
       }
       .pizza-select {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         grid-row: 2/3;
         grid-column: 1/2;
+        @include wrapper;
+          .which_pizza{
+            @include subtitle;
+          }
+          #pizza-select{
+            @include input;
+          }
+        
       }
-      .sauce-warpper {
+      .sauce-wrapper {
         grid-row: 3/4;
+        @include wrapper;
+        
       }
       .drinks-wrapper {
         grid-row: 4/5;
+        @include wrapper;
+        
       }
+    
       .personal-info {
         grid-row: 5/6;
+        @include wrapper;
       }
       .text-area-container {
         grid-row: 6/7;
+        @include wrapper;
       }
       .button-div {
         grid-row: 7/8;
       }
-
+      .legend{
+        @include legend;
+      }
+      
       
   }
