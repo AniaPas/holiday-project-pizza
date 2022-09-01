@@ -19,26 +19,26 @@
        <div class="pizza-select">
         <label for="pizza-select" class="which_pizza">Jaką pizzunię?>>></label>
         <select name="pizzas" id="pizza-select">
-            <option value="none">--Same spoko opcje--</option>
-            <option value="Janusz">Szef Janusz poleca</option>
-            <option value="Grazyna">Specjał Grażyny</option>
-            <option value="Seba">Szama Sebixa</option>
-            <option value="Brajan">Dla Brajanka</option>
-            <option value="Dzesika">Dla Dżesiki </option>
-            <option value="Karyna">Kebs Karyny</option>
+            <option class='pizza-select__option' value="none">--Same spoko opcje--</option>
+            <option class='pizza-select__option' value="Janusz">Szef Janusz poleca</option>
+            <option class='pizza-select__option' value="Grazyna">Specjał Grażyny</option>
+            <option class='pizza-select__option' value="Seba">Szama Sebixa</option>
+            <option class='pizza-select__option' value="Brajan">Dla Brajanka</option>
+            <option class='pizza-select__option' value="Dzesika">Dla Dżesiki </option>
+            <option class='pizza-select__option' value="Karyna">Kebs Karyny</option>
         </select>
         </div> 
         <fieldset class="sauce-wrapper">
             <legend class="legend">Sosidło</legend>
             <div class="sauces">
                 <input type="checkbox" id="mild" name="sauce" value="mild" >
-                <label for="mild">Lamersko-łagodny</label>
+                <label for="mild" class="sauce-wrapper__label">Lamersko-łagodny</label>
                 <input type="checkbox" id="hot" name="sauce" value="hot">
-                <label for="hot">Lekki dreszczyk</label>
+                <label for="hot"class="sauce-wrapper__label">Lekki dreszczyk</label>
                 <input type="checkbox" id="very-hot" name="sauce" value="very-hot">
-                <label for="very-hot">Mordę wykręca</label>
+                <label for="very-hot" class="sauce-wrapper__label">Mordę wykręca</label>
                 <input type="checkbox" id="killer" name="sauce" value="killer">
-                <label for="killer">Szacun na dzielni</label>
+                <label for="killer" class="sauce-wrapper__label">Szacun na dzielni</label>
             </div>
         </fieldset>
         </div>
@@ -46,29 +46,29 @@
                 <legend class="legend">Ze mną nie wypijesz?</legend>
         <div class="drinks">
             <input type="checkbox" class="checkbox" id="coffee" name="drink" value="coffee">
-            <label for="coffee">Kapuczyna</label>
+            <label for="coffee" class="drinks__label">Kapuczyna</label>
             <input type="checkbox" class="checkbox" id="beer" name="drink" value="beer">
-            <label for="beer">Piwerko</label>
+            <label for="beer" class="drinks__label">Piwerko</label>
             <input type="checkbox" class="checkbox" id="water" name="drink" value="water">
-            <label for="water">H2O, bo prowadzę</label>
+            <label for="water" class="drinks__label">H2O, bo prowadzę</label>
             </div>
         </fieldset>
         <fieldset class="personal-info">
             <legend class="legend">Dawaj dane</legend>
-          <input type="text" id="name" name="" value="">
-            <label for="">Imię i nazwisko</label>
-            <input type="text" id="email" name="">
-            <label for="">e-mail</label>
-            <input type="text" id="address" name="">
-            <label for="address">Adres dostawy</label>
-            <input type="" id="phone" name="" value="" placeholder="+48xxxxxxxxx">
-            <label for="phone">telefon</label>
+            <label for="name" class="personal-info__label">Imię i nazwisko</label>
+            <input type="text" class="personal-info__input" id="name" name="" value="">
+            <label for="email" class="personal-info__label">E-mail</label>
+            <input type="text" class="personal-info__input" id="email" name="">
+            <label for="address" class="personal-info__label">Adres dostawy</label>
+            <input type="text" class="personal-info__input" id="address" name="">
+            <label for="phone" class="personal-info__label" >Telefon</label>
+            <input type="" id="phone" class="personal-info__input" name="" value="" placeholder="+48xxxxxxxxx">
         </fieldset>
     
         <fieldset class="text-area-container">
             <legend class="legend">Jak coś, to pisz</legend>
             <label for="chef-message"></label>
-            <input type="text-area" class="text-area" id ="chef-message" placeholder="Cynk dla Janusza">
+            <textarea class="text-area" id ="chef-message" placeholder="Cynk dla Janusza" rows="2" cols="50"></textarea>
         </fieldset>
         <div class="button-div">
             <button class="submit-btn" id="submit-btn">Dobra, bierę</button>

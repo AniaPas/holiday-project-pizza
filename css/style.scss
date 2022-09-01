@@ -3,14 +3,14 @@
 * {
     margin: 0 0 0 0;
     font-family: $font1;
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
   }
-  
+
   body {
-    margin: 10px;
+    margin: 5vw;
     display: grid;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: 40vh repeat(3, 30vh) 50vh 30vh 30vh;
     background-color: $red;
     
       header {
@@ -32,7 +32,7 @@
           color: $yellow;
           font-size: 2rem;
           text-decoration: overline;
-          margin-top: 10vh;
+          margin: 7px 0;
         }
       
         .logo {
@@ -57,33 +57,104 @@
           #pizza-select{
             @include input;
           }
+        }
         
       }
       .sauce-wrapper {
         grid-row: 3/4;
+        display: flex;
+        @include flex;
         @include wrapper;
+          .sauce-wrapper__label {
+            display: inline-block;
+            margin-right: 3vw;
+          }
         
-      }
+          }
+          
       .drinks-wrapper {
         grid-row: 4/5;
+       @include flex;
         @include wrapper;
+          .drinks__label {
+            display: inline-block;
+            margin-right: 3vw;
+          }
         
       }
     
       .personal-info {
         grid-row: 5/6;
+       @include flex;
         @include wrapper;
+        .personal-info__input{
+            @include input;
+            display:inline-block;;
+            margin-bottom:2vh;
+
+          }
+        .personal-info__label {
+          display:inline-block;
+          margin: 1vh 5vw;
+        }
       }
+
       .text-area-container {
         grid-row: 6/7;
+        display: flex;
+        justify-content: center;
         @include wrapper;
+          #chef-message {
+            @include input;
+          }
       }
       .button-div {
         grid-row: 7/8;
       }
       .legend{
         @include legend;
+      }  
+      ::placeholder{
+        color: black;
+      
       }
+      @keyframes myAnimations {
+        from {
+          transform: rotate(0deg);
+        }
       
+        50% {
+          background-color: $green;
+        }
       
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .button-div{
+        @include flex;
+        #submit-btn {
+          font-family: $font2;
+          background-color: $yellow;
+          border-radius: 50%;
+          border: 3px solid black;
+          width: 120px;
+          height: 120px;
+            &:hover{
+              animation: myAnimations linear 1s;
+            }
+          
+        }
+    }
+  @media screen and (max-width: 480px){ 
+    body {
+      grid-template-rows: 40vh repeat(3, 30vh) 50vh 30vh 30vh;
+        header { 
+          display: flex;
+          flex-direction: column;
+            .bar-name {
+            font-size: 3rem;
+          }
+        }
+    } 
   }
