@@ -426,8 +426,8 @@ body .pizza-select #pizza-select {
 
 @media screen and (max-width: 768px) {
   body {
-    -ms-grid-rows: 40vh (35vh)[3] 70vh 30vh 30vh;
-        grid-template-rows: 40vh repeat(3, 35vh) 70vh 30vh 30vh;
+    -ms-grid-rows: 40vh (40vh)[3] 75vh 30vh 30vh;
+        grid-template-rows: 40vh repeat(3, 40vh) 75vh 30vh 30vh;
   }
   body header {
     display: -webkit-box;
@@ -440,6 +440,15 @@ body .pizza-select #pizza-select {
   }
   body header .bar-name {
     font-size: 3rem;
+  }
+  body header .bar-name .sauce-wrapper__div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

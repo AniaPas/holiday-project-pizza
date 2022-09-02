@@ -155,13 +155,16 @@
     }
   @media screen and (max-width: 768px){ 
     body {
-      grid-template-rows: 40vh repeat(3, 35vh) 70vh 30vh 30vh;
+      grid-template-rows: 40vh repeat(3, 40vh) 75vh 30vh 30vh;
         header { 
           display: flex;
           flex-direction: column;
             .bar-name {
             font-size: 3rem;
-          
+            .sauce-wrapper__div{
+              display: flex;
+              flex-direction: column;
+            }
           }
         }
     } 
