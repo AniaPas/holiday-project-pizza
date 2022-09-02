@@ -18,7 +18,7 @@
     font-size: 2rem;
     font-family: $font2;
     font-weight: 200;
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 768px) {
         font-size: 1.5rem;
     }
 }
@@ -29,10 +29,12 @@
     width: 30vw;
     border: solid 3px black;
     padding: 5px;
-        :hover {
-            background-color: $yellow;
-        }
-} 
+    @media screen and (max-width: 768px) {
+        width: 70vw;
+    }
+}
+     
+
 @mixin checkbox {
     background-color: $green;
     width: 6px;
@@ -46,15 +48,30 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items:center;
+   
 }
-@mixin checkbox { 
+@mixin flexHorizontal {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+}
+/*@mixin checkbox { 
         position: absolute;
         top: 0;
         left: 0;
         height: 25px;
         width: 25px;
         background-color: #eee;
-}
+}*/
 @mixin inputSm {
     width: 60px;
 }    

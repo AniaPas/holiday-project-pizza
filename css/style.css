@@ -1,3 +1,11 @@
+/*@mixin checkbox { 
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+}*/
 * {
   margin: 0 0 0 0;
   font-family: "Didact Gothic";
@@ -89,7 +97,7 @@ body .pizza-select .which_pizza {
   font-weight: 200;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   body .pizza-select .which_pizza {
     font-size: 1.5rem;
   }
@@ -103,34 +111,60 @@ body .pizza-select #pizza-select {
   padding: 5px;
 }
 
-body .pizza-select #pizza-select :hover {
-  background-color: #daa801;
+@media screen and (max-width: 768px) {
+  body .pizza-select #pizza-select {
+    width: 70vw;
+  }
 }
 
 .sauce-wrapper {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   grid-row: 3/4;
+  background-color: #daa801;
+  border-radius: 8px;
+  border: solid 3px black;
+  margin-top: 3vh;
+}
+
+.sauce-wrapper .sauce-wrapper__div {
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #daa801;
-  border-radius: 8px;
-  border: solid 3px black;
-  margin-top: 3vh;
+}
+
+@media screen and (max-width: 768px) {
+  .sauce-wrapper .sauce-wrapper__div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .sauce-wrapper .sauce-wrapper__label {
@@ -142,25 +176,50 @@ body .pizza-select #pizza-select :hover {
   -ms-grid-row: 4;
   -ms-grid-row-span: 1;
   grid-row: 4/5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #daa801;
   border-radius: 8px;
   border: solid 3px black;
   margin-top: 3vh;
+}
+
+.drinks-wrapper .drinks-wrapper__div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .drinks-wrapper .drinks-wrapper__div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .drinks-wrapper .drinks__label {
@@ -203,8 +262,10 @@ body .pizza-select #pizza-select :hover {
   margin-bottom: 2vh;
 }
 
-.personal-info .personal-info__input :hover {
-  background-color: #daa801;
+@media screen and (max-width: 768px) {
+  .personal-info .personal-info__input {
+    width: 70vw;
+  }
 }
 
 .personal-info .personal-info__label {
@@ -219,13 +280,42 @@ body .pizza-select #pizza-select :hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #daa801;
   border-radius: 8px;
   border: solid 3px black;
   margin-top: 3vh;
+}
+
+@media screen and (max-width: 768px) {
+  .text-area-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .text-area-container #chef-message {
@@ -236,8 +326,10 @@ body .pizza-select #pizza-select :hover {
   padding: 5px;
 }
 
-.text-area-container #chef-message :hover {
-  background-color: #daa801;
+@media screen and (max-width: 768px) {
+  .text-area-container #chef-message {
+    width: 70vw;
+  }
 }
 
 .button-div {
@@ -332,10 +424,10 @@ body .pizza-select #pizza-select :hover {
           animation: myAnimations linear 1s;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   body {
-    -ms-grid-rows: 40vh (30vh)[3] 50vh 30vh 30vh;
-        grid-template-rows: 40vh repeat(3, 30vh) 50vh 30vh 30vh;
+    -ms-grid-rows: 40vh (35vh)[3] 70vh 30vh 30vh;
+        grid-template-rows: 40vh repeat(3, 35vh) 70vh 30vh 30vh;
   }
   body header {
     display: -webkit-box;
