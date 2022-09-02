@@ -94,14 +94,21 @@ function getChefMessage() {
          return obtainChefMessage
     }
 }
+function changeStyle() {
+    
+    btn.style.backgroundColor = 'rgb(69, 182, 31)'
+}
 
 //Wrap multiple functions into one and applying the class constructor:
 
 function wrapper(){
+    changeStyle()
     const order1 = new Order(getName(), getMail(), getPhone(),getAddress(), getPizza(), getCheckBox('input[name="sauce"]:checked', 'sauce'), getCheckBox('input[name="drink"]:checked', 'drink'), getChefMessage())
     console.log(order1)
+    
 }
 btn.addEventListener('click', wrapper)
+
 
 
 
